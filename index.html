@@ -14,9 +14,10 @@
             align-items: center;
             flex-direction: column; /* Stacks items vertically */
             background-color: #ffffff; /* White background */
+            text-align: center; /* Center text for mobile */
         }
         img {
-            width: 35%; /* Set the width of the GIF to 25% of the page */
+            width: 35%; /* Set the width of the GIF to 35% of the page on larger screens */
             height: auto; /* Maintain aspect ratio */
         }
         p {
@@ -24,6 +25,16 @@
             font-family: Arial, sans-serif; /* Ensures Arial font */
             color: #333333;
             margin-top: 20px; /* Space between the GIF and text */
+        }
+
+        /* Add media queries to adjust for smaller screens */
+        @media (max-width: 600px) {
+            img {
+                width: 60%; /* Increase the size for mobile devices */
+            }
+            p {
+                font-size: 18px; /* Reduce text size on smaller screens */
+            }
         }
     </style>
 </head>
