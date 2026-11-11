@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dig-dig: Fixing unbalanced tables</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Stacks items vertically */
-            background-color: #ffffff; /* White background */
-            text-align: center; /* Center text for mobile */
-        }
-        img {
-            width: 35%; /* Set the width of the GIF to 35% of the page on larger screens */
-            height: auto; /* Maintain aspect ratio */
-        }
-        p {
-            font-size: 24px;
-            font-family: Arial, sans-serif; /* Ensures Arial font */
-            color: #333333;
-            margin-top: 20px; /* Space between the GIF and text */
-        }
-
-        /* Add media queries to adjust for smaller screens */
-        @media (max-width: 600px) {
-            img {
-                width: 60%; /* Increase the size for mobile devices */
-            }
-            p {
-                font-size: 18px; /* Reduce text size on smaller screens */
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>digdig — Solutions for the small pains in life</title>
+  <meta name="description" content="digdig makes small tools for the small pains in life. GetMakro, a food log you can keep, is the first.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <img src="https://res.cloudinary.com/dgdgcugns/image/upload/v1725746809/download_upkqeu.gif" alt="Dig Dig GIF">
-    <p>Coming Soon to an unbalanced table near you.</p>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="./">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="currentColor" d="M4 8.5h24v2.4H4zM7 10.9h2.3V26H7z"/>
+          <path fill="currentColor" d="M22.4 10.9H24.7V21.4h-2.3z"/>
+          <path fill="var(--primary)" d="M21.2 22.2h5.4l-.7 3.3h-4z"/>
+        </svg>
+        <span>digdig</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="makro/">GetMakro</a>
+        <a href="https://apps.apple.com/us/app/getmakro/id6757253371">Get the app</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div>
+          <h1>Solutions for the small pains in life.</h1>
+          <p class="lede">A wobbling table does not need a new table. It needs something small under the short leg. digdig is a home for fixes like that.</p>
+        </div>
+      </section>
+
+      <section class="app-band">
+        <div class="phone">
+          <img src="assets/makro/03-meals.png" alt="GetMakro showing a day of logged meals: salmon and veggies, a chicken rice bowl, and Greek yogurt and berries.">
+        </div>
+        <div>
+          <p class="kicker">The first micro app</p>
+          <h2>Tracking regularly beats tracking perfectly.</h2>
+          <p>GetMakro is a food log you can actually keep. Say what you ate, or type it. Calories, macros, and fiber land on the day, against a goal you set. The month matters more than a perfect plate.</p>
+          <div class="actions">
+            <a class="button" href="makro/">See GetMakro</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>digdig. Solutions for the small pains in life.</p>
+      <p class="footer-links">
+        <a href="makro/">GetMakro</a>
+        <a href="https://apps.apple.com/us/app/getmakro/id6757253371">Get the app</a>
+        <a href="makro/terms/">Terms</a>
+        <a href="makro/privacy/">Privacy</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

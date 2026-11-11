@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GetMakro privacy policy</title>
+  <meta name="description" content="What GetMakro stores when you sign in with Apple, log a meal by voice or text, and sync nutrition to Apple Health.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="currentColor" d="M4 8.5h24v2.4H4zM7 10.9h2.3V26H7z"/>
+          <path fill="currentColor" d="M22.4 10.9H24.7V21.4h-2.3z"/>
+          <path fill="var(--primary)" d="M21.2 22.2h5.4l-.7 3.3h-4z"/>
+        </svg>
+        <span>digdig</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="../">GetMakro</a>
+        <a href="https://apps.apple.com/us/app/getmakro/id6757253371">Get the app</a>
+        <a href="../terms/">Terms</a>
+        <a href="./" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main id="content" class="legal">
+      <p class="crumbs"><a href="../../">digdig</a> / <a href="../">GetMakro</a> / Privacy</p>
+      <h1>Privacy policy</h1>
+      <p class="updated">Effective November 11, 2026. This policy describes the GetMakro iPhone app, which appears on your phone under the name Makro, and the service that stores its logs. digdig operates both.</p>
+      <p>GetMakro is a food log. The information it handles is the information a log needs: who the account is, what you said you ate, the estimate, and the goal you set. We do not sell personal information, and the app has no advertising.</p>
+
+      <h2>1. Account</h2>
+      <p>You sign in with Apple. The app sends Apple’s identity token to our server so we can confirm the sign-in. We keep Apple’s stable user identifier as your account id. We do not ask Apple for your email address, and we do not receive it.</p>
+      <p>If Apple shares your first name, the app stores that name on the device only. It is not sent to our server.</p>
+      <p>After a successful sign-in, the server returns a session token. The token contains the account id and an expiry, and it lasts up to 90 days. It is stored on the device and sent with later requests so we know which log to open. Signing out deletes the account id, the name, and the session token from that device.</p>
+
+      <h2>2. Meals, goals, and the day</h2>
+      <p>When you log a meal, we store, against your account id:</p>
+      <ul>
+        <li>the meal description</li>
+        <li>estimated calories, protein, carbohydrate, fat, and fiber</li>
+        <li>the time of the meal, and whether that time came from what you said, from the device, or from the server</li>
+        <li>a meal name such as breakfast or lunch, when we have one</li>
+        <li>your time zone, so the meal lands on the right calendar day</li>
+      </ul>
+      <p>We also store the calorie goal and macro split you set, and a per-day calorie total used to draw the calendar. The app keeps a copy of recent meals on the device so a day can open without waiting on the network.</p>
+      <p>The description and the numbers are sent to OpenAI, which returns the nutrition estimate. We send the text of the meal for that purpose. We do not send your name.</p>
+
+      <h2>3. Voice</h2>
+      <p>The microphone is used only when you choose to log by voice, or when you log a meal through Siri. The recording is a temporary audio file on the device. The app sends that audio to our server, which sends it to OpenAI to turn speech into text. The transcript is then handled like a typed meal.</p>
+      <p>We do not keep the audio in your meal history. The temporary file can remain on the device until the system or a later recording replaces it. Siri phrases are processed by Apple under Apple’s terms before they reach the app, and then follow the same path as a typed meal.</p>
+
+      <h2>4. Apple Health</h2>
+      <p>Health sync is off until you allow it. If you turn it on, GetMakro writes the calories, protein, carbohydrate, and fat for a logged meal into Apple Health on your device, along with the meal description as the food name. Fiber is kept in GetMakro and is not written to Apple Health.</p>
+      <p>Those samples stay in Apple Health under your control. Our server does not receive a copy of your Health data from that write. If you delete the meal in GetMakro while sync is on, the app deletes the matching Health samples.</p>
+
+      <h2>5. Subscription</h2>
+      <p>Payment is handled by Apple. We never see your card number. The app uses StoreKit on the device to learn whether the monthly or yearly plan is active, and the renewal date, so it can unlock the log or show the subscription screen. That subscription status is not written into the meal database.</p>
+
+      <h2>6. Who else processes this</h2>
+      <ul>
+        <li><strong>Apple.</strong> Sign in with Apple, the App Store subscription, Siri if you use it, and Apple Health if you turn sync on.</li>
+        <li><strong>Cloudflare.</strong> The API and the stored meals, goals, and day totals run on Cloudflare.</li>
+        <li><strong>OpenAI.</strong> Speech-to-text for a voice log, and the nutrition estimate for a meal description.</li>
+      </ul>
+      <p>We use this information to run the log, estimate meals, show your days and goals, keep you signed in, and operate the subscription gate. We do not use meal logs to advertise to you, and we do not sell them.</p>
+
+      <h2>7. How long it stays</h2>
+      <p>A meal stays until you delete it. Deleting a meal removes it from our storage. Your goals and the calendar totals stay with the account so the app can keep showing them.</p>
+      <p>Signing out does not delete the account on the server. There is not yet a button that erases the whole account in one step. If you want that, contact us through the support channel on the GetMakro App Store listing and ask us to delete the account. We will delete the meals, goals, day totals, and account identifier we store for that Apple user id. Say so plainly in the message. Because we do not receive your email from Apple, include enough for us to find the account, such as a meal description and the approximate dates, from the same Apple ID you used in the app.</p>
+      <p>Server logs that are part of running the API, such as error reports, are kept only as long as we need them to operate and secure the service.</p>
+
+      <h2>8. Children</h2>
+      <p>GetMakro is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has signed in, contact us and we will delete the account.</p>
+
+      <h2>9. Where it is processed</h2>
+      <p>You use the app where you are. Our servers and the processors above can be in other countries, including the United States. By using GetMakro you understand that the meal log is processed there.</p>
+
+      <h2>10. Changes and contact</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new effective date. Questions and deletion requests go to the support contact on the GetMakro App Store listing. That is the channel we read.</p>
+      <p>The <a href="../terms/">terms of use</a> cover the subscription, the estimates, and the license to use the app.</p>
+    </main>
+
+    <footer class="site-footer">
+      <p>GetMakro privacy policy. digdig.</p>
+      <p class="footer-links">
+        <a href="../../">digdig</a>
+        <a href="../">GetMakro</a>
+        <a href="https://apps.apple.com/us/app/getmakro/id6757253371">Get the app</a>
+        <a href="../terms/">Terms</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
