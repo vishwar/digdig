@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Line — The ID you copied should open itself</title>
+  <meta name="description" content="Line is a digdig micro app for the Mac. Copy an ID, press the key you set, and the browser opens that app’s URL with the ID filled in.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="currentColor" d="M4 8.5h24v2.4H4zM7 10.9h2.3V26H7z"/>
+          <path fill="currentColor" d="M22.4 10.9H24.7V21.4h-2.3z"/>
+          <path fill="var(--primary)" d="M21.2 22.2h5.4l-.7 3.3h-4z"/>
+        </svg>
+        <span>digdig</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="../makro/">GetMakro</a>
+        <a href="./" aria-current="page">Line</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <p class="crumbs"><a href="../">digdig</a> / Line</p>
+      <section class="hero">
+        <div>
+          <p class="kicker">A digdig micro app for the Mac</p>
+          <h1>The ID you copied should open itself.</h1>
+          <p class="lede">Line sits in the menu bar. Copy a ticket, a pull request, or a customer ID, then press the key you chose for that app. The browser opens the URL with the ID filled in.</p>
+          <div class="pills">
+            <span class="pill">Menu bar</span>
+            <span class="pill">The key you choose</span>
+            <span class="pill">Stays on your Mac</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <h2>How it works</h2>
+        <p class="section-copy">The clipboard already has the ID. Line’s job is the shortcut between that text and the right page.</p>
+        <div class="steps">
+          <article class="card">
+            <strong>1. Copy the ID</strong>
+            <p>A Linear issue such as PROG-1482, a GitHub number, a Stripe customer, or a URL that already contains the ID.</p>
+          </article>
+          <article class="card">
+            <strong>2. Press the key</strong>
+            <p>⌘L opens Linear. Each other app has its own key, and that key stays off until you turn it on.</p>
+          </article>
+          <article class="card">
+            <strong>3. The page opens</strong>
+            <p>Line puts the ID into that app’s URL and opens it in the browser. A small note confirms which app and which ID.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>A key for each app</h2>
+        <p class="section-copy">Settings is a row per app: the shortcut, and a link you already have. Paste an issue, ticket, or customer page. Line reads the workspace, site, or repo out of that link and keeps <span class="pattern">{id}</span> where the ID was. Linear is on. The other nineteen wait, so twenty global keys are not taken on the first launch.</p>
+        <ul class="catalog">
+          <li><strong>Linear</strong><span class="pattern">https://linear.app/YOUR-WORKSPACE/issue/{id}</span></li>
+          <li><strong>Jira</strong><span class="pattern">https://YOUR-SITE.atlassian.net/browse/{id}</span></li>
+          <li><strong>GitHub Issues</strong><span class="pattern">https://github.com/OWNER/REPO/issues/{id}</span></li>
+          <li><strong>GitHub PRs</strong><span class="pattern">https://github.com/OWNER/REPO/pull/{id}</span></li>
+          <li><strong>GitLab</strong><span class="pattern">https://gitlab.com/OWNER/REPO/-/issues/{id}</span></li>
+          <li><strong>Shortcut</strong><span class="pattern">https://app.shortcut.com/YOUR-WORKSPACE/story/{id}</span></li>
+          <li><strong>Asana</strong><span class="pattern">https://app.asana.com/0/0/{id}</span></li>
+          <li><strong>ClickUp</strong><span class="pattern">https://app.clickup.com/t/{id}</span></li>
+          <li><strong>Zendesk</strong><span class="pattern">https://YOUR-SITE.zendesk.com/agent/tickets/{id}</span></li>
+          <li><strong>Freshdesk</strong><span class="pattern">https://YOUR-SITE.freshdesk.com/a/tickets/{id}</span></li>
+          <li><strong>Intercom</strong><span class="pattern">https://app.intercom.com/a/inbox/YOUR-APP/inbox/shared/all/conversation/{id}</span></li>
+          <li><strong>HubSpot</strong><span class="pattern">https://app.hubspot.com/contacts/PORTAL/ticket/{id}</span></li>
+          <li><strong>Salesforce</strong><span class="pattern">https://YOUR-SITE.lightning.force.com/lightning/r/Case/{id}/view</span></li>
+          <li><strong>PagerDuty</strong><span class="pattern">https://YOUR-TEAM.pagerduty.com/incidents/{id}</span></li>
+          <li><strong>Sentry</strong><span class="pattern">https://YOUR-ORG.sentry.io/issues/{id}</span></li>
+          <li><strong>Azure DevOps</strong><span class="pattern">https://dev.azure.com/ORG/PROJECT/_workitems/edit/{id}</span></li>
+          <li><strong>Monday</strong><span class="pattern">https://YOUR-TEAM.monday.com/boards/BOARD/pulses/{id}</span></li>
+          <li><strong>Notion</strong><span class="pattern">https://www.notion.so/{id}</span></li>
+          <li><strong>Trello</strong><span class="pattern">https://trello.com/c/{id}</span></li>
+          <li><strong>Stripe</strong><span class="pattern">https://dashboard.stripe.com/search?query={id}</span></li>
+        </ul>
+        <p class="fine">Linear and Jira recognize a bare ID anywhere in what you copied. Most of the others look for their own URL or a short prefix, so a stray number stays put. ⌘L takes the browser address bar while Line is running. Change the key in Settings if you want that shortcut back.</p>
+      </section>
+
+      <section>
+        <h2>It forgets, and it stays here</h2>
+        <p class="section-copy">Five seconds after you open an ID, or sixty seconds if you never do, Line lets go of it. Copy the same text again and it is ready again. That countdown is Line’s memory. The clipboard itself is left as you left it.</p>
+        <p class="section-copy">The read happens on your Mac. Line does not send the clipboard anywhere, and it does not ask for Accessibility access. The shortcuts are registered with macOS directly.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Line is a digdig micro app. A menu bar fix for the ID already sitting on your clipboard.</p>
+      <p class="footer-links">
+        <a href="../">digdig</a>
+        <a href="../makro/">GetMakro</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
