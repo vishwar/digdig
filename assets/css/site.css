@@ -329,43 +329,29 @@ section { padding: var(--space-7) 0; }
 }
 
 .tab {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 36px;
   min-width: 88px;
   padding: 0 var(--space-4);
+  border: 0;
   border-radius: var(--radius-pill);
+  background: transparent;
   color: var(--text-secondary);
+  font-family: inherit;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.tab input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  opacity: 0;
-}
-
-.tab:has(input:checked) {
+.tab[aria-selected="true"] {
   background: var(--bg);
   color: var(--text);
   box-shadow: var(--shadow);
 }
 
-.tab:has(input:focus-visible) {
-  outline: 2px solid var(--focus);
-  outline-offset: 3px;
-}
-
-.platforms:has(input[value="ios"]:checked) [data-platform="macos"],
-.platforms:has(input[value="macos"]:checked) [data-platform="ios"] {
-  display: none;
-}
+.app-band[hidden] { display: none; }
 
 .app-mark {
   display: flex;

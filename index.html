@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=3">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -36,19 +36,13 @@
             <h1>Solutions for the small pains in life.</h1>
             <p class="lede">A wobbling table does not need a new table. It needs something small under the short leg. digdig is a home for fixes like that.</p>
             <div class="tablist" role="tablist" aria-label="Platform">
-              <label class="tab">
-                <input type="radio" name="platform" value="ios" checked>
-                iOS
-              </label>
-              <label class="tab">
-                <input type="radio" name="platform" value="macos">
-                macOS
-              </label>
+              <button type="button" class="tab" role="tab" id="tab-ios" aria-controls="panel-ios" aria-selected="true">iOS</button>
+              <button type="button" class="tab" role="tab" id="tab-macos" aria-controls="panel-macos" aria-selected="false" tabindex="-1">macOS</button>
             </div>
           </div>
         </section>
 
-        <section class="app-band" data-platform="ios">
+        <section class="app-band" id="panel-ios" role="tabpanel" aria-labelledby="tab-ios">
           <div class="phone">
             <img src="assets/makro/03-meals.png" alt="GetMakro showing a day of logged meals: salmon and veggies, a chicken rice bowl, and Greek yogurt and berries.">
           </div>
@@ -62,7 +56,7 @@
           </div>
         </section>
 
-        <section class="app-band" data-platform="macos">
+        <section class="app-band" id="panel-macos" role="tabpanel" aria-labelledby="tab-macos" hidden>
           <div class="app-mark">
             <img src="assets/line/icon.png" alt="Line app icon, a white arrow on blue.">
           </div>
@@ -90,5 +84,18 @@
       </p>
     </footer>
   </div>
+  <script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((item) => {
+          const selected = item === tab;
+          item.setAttribute("aria-selected", selected ? "true" : "false");
+          item.tabIndex = selected ? 0 : -1;
+          document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
