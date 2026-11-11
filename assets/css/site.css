@@ -319,6 +319,70 @@ section { padding: var(--space-7) 0; }
   overflow: hidden;
 }
 
+.tablist {
+  display: inline-flex;
+  gap: 4px;
+  margin-top: var(--space-5);
+  padding: 4px;
+  background: var(--surface);
+  border-radius: var(--radius-pill);
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  min-width: 88px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.tab:has(input:checked) {
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.tab:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.platforms:has(input[value="ios"]:checked) [data-platform="macos"],
+.platforms:has(input[value="macos"]:checked) [data-platform="ios"] {
+  display: none;
+}
+
+.app-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(280px, 100%);
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: none;
+}
+
+.app-mark img {
+  width: 180px;
+  height: 180px;
+  border-radius: 22%;
+}
+
 .features {
   display: grid;
   gap: var(--space-8);
@@ -446,7 +510,7 @@ section { padding: var(--space-7) 0; }
     padding: var(--space-6);
   }
 
-  .app-band:not(:has(.phone)) { grid-template-columns: 1fr; }
+  .app-band:not(:has(.phone, .app-mark)) { grid-template-columns: 1fr; }
 
   .catalog { grid-template-columns: 1fr 1fr; column-gap: var(--space-6); }
 
